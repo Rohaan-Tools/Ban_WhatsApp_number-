@@ -2,6 +2,11 @@
 
 # Replace '1234567890' with the WhatsApp number you want to ban
 NUMBER_TO_BAN='1234567890'
+CONTACT_NAME='Blocked Contact'  # Magaca aad rabto inaad u bixiso lambarka cusub
+
+# Add the number to contacts
+termux-contact-add -n "$CONTACT_NAME" -p "$NUMBER_TO_BAN"
+echo "Number $NUMBER_TO_BAN has been added to contacts as '$CONTACT_NAME'."
 
 # Use termux-contact-list to get a list of all contacts
 CONTACTS=$(termux-contact-list)
